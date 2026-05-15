@@ -1,0 +1,12 @@
+name: Grade
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  grade:
+    uses: AcademyDiscovery/fast-api-grader/.github/workflows/run-tests.yml@main
+    permissions:
+      pull-requests: write
+      issues: write
